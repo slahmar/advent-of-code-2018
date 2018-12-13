@@ -9,8 +9,6 @@ def get_regex():
         regex += f'{char}{char.lower()}|{char.lower()}{char}'
     return regex
 
-def get_pattern_matches(polymer):
-    return re.findall(r'([a-z])(\1)', polymer, re.IGNORECASE)
 
 with open('05.txt', 'r') as file:
     original_polymer = file.read().rstrip('\n')
